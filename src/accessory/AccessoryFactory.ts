@@ -40,6 +40,7 @@ import IRAirConditionerAccessory from './IRAirConditionerAccessory';
 import SecuritySystemAccessory from './SecuritySystemAccessory';
 import VibrationSensorAccessory from './VibrationSensorAccessory';
 import DoorbellAccessory from './DoorbellAccessory';
+import SoilAccessory from './SoilAccessory';
 
 
 export default class AccessoryFactory {
@@ -67,6 +68,9 @@ export default class AccessoryFactory {
       case 'tgq':
       case 'tgkg':
         handler = new DimmerAccessory(platform, accessory);
+        break;
+      case 'zwjcy':
+        handler = new SoilAccessory(platform, accessory);
         break;
 
       // Electrical Products
